@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Futryk Fabricio - Entregas</title>
+  </head>
+  <body>
+    <div>
+      <h1>Trabajos</h1>
+
+      <ul id="container"></ul>
+    </div>
+
+    <script>
+      let container = document.getElementById("container");
+      const apiLink =
+        "https://api.github.com/repos/futrykfabricio/plataformas-moviles-entregas/git/trees/master";
+
+      axios
+        .get(apiLink)
+        .then((res) => {
+          const tree = res.data.tree;
+
+          tree.forEach((dir) => {
+            if (dir.type === "tree") {
+              let listItem = document.createElement("li");
+              let anchor = document.createElement("a");
+              let text = document.createTextNode(dir.path);
+
+              anchor.href = `https://futrykfabricio.github.io/plataformas-moviles-entregas/${dir.path}`;
+              anchor.appendChild(text);
+
+              listItem.appendChild(anchor);
+
+              container.appendChild(listItem);
+            }
+          });
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    </script>
+  </body>
+</html>
