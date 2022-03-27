@@ -21,41 +21,36 @@
       const rawLink =
         "https://raw.githubusercontent.com/futrykfabricio/plataformas-moviles-entregas/master/";
 
-      const getTasks = async () => {
+      async () => {
         let res = await axios.get(apiLink);
         const tree = res.data.tree;
 
-        if (tree) {
-          tree.forEach(async (dir) => {
-            if (dir.type === "tree") {
-              let readmeLink = rawLink + `${dir.path}/README.md`;
-              let readmeContent = await axios.get(readmeLink);
+        if (!tree) return;
 
-              if (!readmeContent) return;
+        tree.forEach(async (dir) => {
+          if (dir.type === "tree") {
+            let readmeLink = rawLink + `${dir.path}/README.md`;
+            let readmeContent = await axios.get(readmeLink);
 
-              let li = document.createElement("li");
-              let a = document.createElement("a");
+            if (!readmeContent) return;
 
-              let title = readmeContent.data
-                .split("\n")
-                .shift()
-                .replace("# ", "");
+            let li = document.createElement("li");
+            let a = document.createElement("a");
 
-              let text = document.createTextNode(
-                `${dir.path.toUpperCase()} | ${title}`
-              );
+            let title = readmeContent.data
+              .split("\n")
+              .shift()
+              .replace("# ", "");
 
-              a.href = `./${dir.path}`;
+            a.innerHTML += `${dir.path.toUpperCase()} | ${title}`;
+            a.href = `./${dir.path}`;
 
-              a.appendChild(text);
-              li.appendChild(a);
-              container.appendChild(li);
-            }
-          });
-        }
+            a.appendChild(text);
+            li.appendChild(a);
+            container.appendChild(li);
+          }
+        });
       };
-
-      getTasks();
     </script>
   </body>
 </html>
