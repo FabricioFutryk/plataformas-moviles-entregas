@@ -1,8 +1,8 @@
-### HTML y GitHub
+# HTML y GitHub
 
-# Consigna
+## Consigna
 
-## Primera Parte: Repositorio en GitHub
+### Primera Parte: Repositorio en GitHub
 
 - Crear usuario en [GitHub](https://github.com) (si es que todavía no tienen).
 - Crear un nuevo repositorio, con el nombre `plataformas-moviles-entregas`.
@@ -16,7 +16,7 @@
   3. Seleccionar la branch `main` y la carpeta `root` del repositorio.
   4. Click en `save` para guardar los cambios.
 
-## Segunda Parte: Contenido en HTML
+### Segunda Parte: Contenido en HTML
 
 - Elegir un artículo de la wikipedia
 - Seleccionar todo el texto del artículo y copiarlo en el archivo HTML que creamos en `tp-1/index.html`.
