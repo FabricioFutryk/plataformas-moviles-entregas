@@ -21,7 +21,7 @@
       const rawLink =
         "https://raw.githubusercontent.com/futrykfabricio/plataformas-moviles-entregas/master/";
 
-      async () => {
+      const getTasks = async () => {
         let res = await axios.get(apiLink);
         const tree = res.data.tree;
 
@@ -45,12 +45,13 @@
             a.innerHTML += `${dir.path.toUpperCase()} | ${title}`;
             a.href = `./${dir.path}`;
 
-            a.appendChild(text);
             li.appendChild(a);
             container.appendChild(li);
           }
         });
       };
+
+      getTasks();
     </script>
   </body>
 </html>
