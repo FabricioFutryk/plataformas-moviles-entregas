@@ -18,30 +18,44 @@
       let container = document.getElementById("container");
       const apiLink =
         "https://api.github.com/repos/futrykfabricio/plataformas-moviles-entregas/git/trees/master";
+      const rawLink =
+        "https://raw.githubusercontent.com/futrykfabricio/plataformas-moviles-entregas/master/";
 
-      axios
-        .get(apiLink)
-        .then((res) => {
-          const tree = res.data.tree;
+      const getTasks = async () => {
+        let res = await axios.get(apiLink);
+        const tree = res.data.tree;
 
-          tree.forEach((dir) => {
+        if (tree) {
+          tree.forEach(async (dir) => {
             if (dir.type === "tree") {
-              let listItem = document.createElement("li");
-              let anchor = document.createElement("a");
-              let text = document.createTextNode(dir.path);
+              let readmeLink = rawLink + `${dir.path}/README.md`;
+              let readmeContent = await axios.get(readmeLink);
 
-              anchor.href = `./${dir.path}`;
-              anchor.appendChild(text);
+              if (!readmeContent) return;
 
-              listItem.appendChild(anchor);
+              let li = document.createElement("li");
+              let a = document.createElement("a");
 
-              container.appendChild(listItem);
+              let title = readmeContent.data
+                .split("\n")
+                .shift()
+                .replace("# ", "");
+
+              let text = document.createTextNode(
+                `${dir.path.toUpperCase()} | ${title}`
+              );
+
+              a.href = `./${dir.path}`;
+
+              a.appendChild(text);
+              li.appendChild(a);
+              container.appendChild(li);
             }
           });
-        })
-        .catch((err) => {
-          console.error(err);
-        });
+        }
+      };
+
+      getTasks();
     </script>
   </body>
 </html>
