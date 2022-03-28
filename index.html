@@ -30,19 +30,20 @@
         tree.forEach(async (dir) => {
           if (dir.type === "tree") {
             let readmeLink = rawLink + `${dir.path}/README.md`;
-            let readmeContent = await axios.get(readmeLink);
+            let readmeResponse = await axios.get(readmeLink);
 
-            if (!readmeContent) return;
+            if (!readmeResponse) return;
+
+            const readmeContent = readmeResponse.data;
 
             let li = document.createElement("li");
             let a = document.createElement("a");
 
-            let title = readmeContent.data
-              .split("\n")
-              .shift()
-              .replace("# ", "");
+            let title = readmeContent.split("\n").shift().replace("# ", "");
 
-            a.innerHTML += `${dir.path.toUpperCase()} | ${title}`;
+            let date = readmeContent.split("\n")[1].replace("# ", "");
+
+            a.innerHTML += `${dir.path.toUpperCase()} | ${title} | ${date}`;
             a.href = `./${dir.path}`;
 
             li.appendChild(a);
