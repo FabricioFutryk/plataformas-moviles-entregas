@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script
       id="MathJax-script"
@@ -16,7 +17,7 @@
     <h1>Principio del palomar</h1>
     <hr />
     <div>
-      <div>
+      <div class="tright">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Pigeons-in-holes.jpg/220px-Pigeons-in-holes.jpg"
         />
@@ -25,7 +26,7 @@
           <em>n</em> = 7 y <em>m</em> = 9.
         </p>
       </div>
-      <p>
+      <p class="content">
         El <strong>principio del palomar</strong>, también llamado
         <strong>principio de Dirichlet</strong> o
         <strong>principio de las cajas</strong>, establece que si
@@ -51,13 +52,12 @@
         >, también con el nombre de este autor.
       </p>
     </div>
-    <div>
+    <div class="tindex">
       <h2>Índice</h2>
       <ol>
         <li>
           <a href="#Enunciado">Enunciado</a>
           <ol>
-            <br />
             <li>
               <a href="#Aplicaciones">Aplicaciones</a>
             </li>
@@ -75,9 +75,9 @@
       </ol>
     </div>
     <div id="Enunciado">
-      <h2>Enunciado</h2>
+      <h2 class="title">Enunciado</h2>
       <hr />
-      <p>
+      <p class="content">
         Principio de distribución, del palomar o del cajón de la paloma de
         Dirichlet. Sean <em>m</em>, <em>n</em> y <em>p</em> tres números
         naturales. Si se desean colocar <em>np</em> + <em>m</em> palomas en
@@ -98,7 +98,7 @@
         colocar <em>m</em> objetos en <em>n</em> cajas, con <em>m > n</em>, al
         menos una caja debe contener al menos 2 objetos.
       </p>
-      <h3 id="Aplicaciones">Aplicaciones</h3>
+      <h3 class="subtitle" id="Aplicaciones">Aplicaciones</h3>
       <p>
         Aunque el principio del palomar puede parecer una observación trivial,
         se puede utilizar para demostrar resultados inesperados. Por ejemplo,
@@ -114,7 +114,7 @@
         un millón de personas hay más de 5 personas con el mismo número de pelos
         en la cabeza (por el principio de Dirichlet generalizado).
       </p>
-      <h3 id="Enunciado_general">Enunciado general</h3>
+      <h3 class="subtitle" id="Enunciado_general">Enunciado general</h3>
       <p>
         Una versión generalizada de este principio dice que, si
         <em>n</em> objetos
@@ -122,36 +122,42 @@
         guardarse en <em>m</em> cajas, al menos una caja debe contener no menos
         de
         <br />
-        \(\lceil\frac{n}{m}\rceil\) objetos donde \(\lceil\dots\rceil\) denota
-        la función
-        <a
-          href="https://es.wikipedia.org/wiki/Funciones_de_parte_entera#Funci%C3%B3n_techo"
-          >techo</a
-        >.
+        <span class="identation"
+          >\(\lceil\frac{n}{m}\rceil\) objetos donde \(\lceil\dots\rceil\)
+          denota la función
+          <a
+            href="https://es.wikipedia.org/wiki/Funciones_de_parte_entera#Funci%C3%B3n_techo"
+            >techo</a
+          >.</span
+        >
         <br />
         Además existirá otra caja que contendrá no más de
         <br />
-        \(\lfloor\frac{n}{m}\rfloor\) objetos donde \(\lfloor\dots\rfloor\)
-        denota la función
-        <a
-          href="https://es.wikipedia.org/wiki/Funciones_de_parte_entera#Funci%C3%B3n_piso/suelo/parte_entera"
-          >suelo</a
-        >.
+        <span class="identation"
+          >\(\lfloor\frac{n}{m}\rfloor\) objetos donde \(\lfloor\dots\rfloor\)
+          denota la función
+          <a
+            href="https://es.wikipedia.org/wiki/Funciones_de_parte_entera#Funci%C3%B3n_piso/suelo/parte_entera"
+            >suelo</a
+          >.</span
+        >
         <br />
         Como ejemplo de aplicación en una ciudad de más de un millón de
         habitantes habrá como mínimo 2733 personas que hayan nacido el mismo día
         del año, ya que:
         <br />
-        \(\lceil1000000/366\rceil = \lceil2732,24\dots\rceil = 2733\)
+        <span class="identation"
+          >\(\lceil1000000/366\rceil = \lceil2732,24\dots\rceil = 2733\)</span
+        >
         <br />
         Donde se ha tenido en cuenta que existen 366 posibilidades para la fecha
         de aniversario de una persona contando la existencia de años bisiestos.
       </p>
     </div>
     <div id="Formulacion_matematica">
-      <h2>Formulación matemática</h2>
+      <h2 class="title">Formulación matemática</h2>
       <hr />
-      <p>
+      <p class="content">
         Técnicamente, el <strong>principio del palomar</strong> se corresponde
         con la
         <a href="https://es.wikipedia.org/wiki/Aritm%C3%A9tica_modular"
@@ -169,21 +175,21 @@
       </p>
       <strong>Demostración por inducción:</strong>
       <ul>
-        <li>
+        <li class="identation">
           <strong>Paso base:</strong> Supongamos \(|B| = 0\), es decir, \(B =
           \emptyset\). Entonces no existe ninguna función \(f: A\to B\), en
           particular no existe ninguna función inyectiva.
         </li>
-        <li>
+        <li class="identation">
           <strong>Hipótesis inductiva:</strong> \(f: A\to B\) no es inyectiva
           para todo conjunto finito \(A\) y para todo conjunto finito \(B\), que
           cumplan \(|A| > |B|\), y \(|B| <= n\), con \(n >= 0\).
         </li>
-        <li>
+        <li class="identation">
           <strong>Tesis inductiva:</strong> Para \(|A| > |B| = n + 1\), no
           existe una función \(f: A\to B\) inyectiva.
         </li>
-        <li>
+        <li class="identation">
           <strong>Demostración del paso inductivo:</strong> Como A no es vacío,
           elijamos un \(a\in {\mbox{A}}\qquad\). Pueden ocurrir dos cosas. O
           bien existe otro elemento distinto a \(a\) en A, llamémosle \(a'\) que
@@ -200,9 +206,9 @@
       </ul>
     </div>
     <div id="Usos_y_aplicaciones">
-      <h2>Usos y aplicaciones</h2>
+      <h2 class="title">Usos y aplicaciones</h2>
       <hr />
-      <p>
+      <p class="content">
         El principio del palomar es encontrado a menudo en informática. Por
         ejemplo, las colisiones son inevitables en una
         <a href="https://es.wikipedia.org/wiki/Tabla_hash">tabla hash</a> porque
