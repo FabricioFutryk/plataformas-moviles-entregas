@@ -14,220 +14,227 @@
     <title>Futryk Fabricio - TP N°1</title>
   </head>
   <body>
-    <h1>Principio del palomar</h1>
-    <hr />
-    <div>
-      <div class="tright">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Pigeons-in-holes.jpg/220px-Pigeons-in-holes.jpg"
-        />
+    <div class="article">
+      <h1 class="title">Principio del palomar</h1>
+      <hr />
+      <div>
+        <div class="tright">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Pigeons-in-holes.jpg/220px-Pigeons-in-holes.jpg"
+          />
+          <p>
+            La inspiración para el nombre del principio: aves en un palomar.
+            Aquí
+            <em>n</em> = 7 y <em>m</em> = 9.
+          </p>
+        </div>
+        <p class="content">
+          El <strong>principio del palomar</strong>, también llamado
+          <strong>principio de Dirichlet</strong> o
+          <strong>principio de las cajas</strong>, establece que si
+          <em>n</em> palomas se distribuyen en <em>m</em> palomares, y si
+          <em>n > m</em>, entonces al menos habrá un palomar con más de una
+          paloma. Otra forma de decirlo es que si <em>m</em> huecos pueden
+          albergar como mucho <em>m</em> objetos si cada uno de los objetos está
+          en un hueco distinto, así que el hecho de añadir otro objeto fuerza a
+          volver a utilizar alguno de los huecos. A manera de ejmplo: si se
+          toman trece personas, al menos dos habrán nacido el mismo mes.
+        </p>
+        <br />
         <p>
-          La inspiración para el nombre del principio: aves en un palomar. Aquí
-          <em>n</em> = 7 y <em>m</em> = 9.
+          El primer enunciado del principio se cree que proviene de
+          <a href="https://es.wikipedia.org/wiki/Peter_Gustav_Lejeune_Dirichlet"
+            >Dirichlet</a
+          >
+          en <a href="https://es.wikipedia.org/wiki/1834">1834</a> con el nombre
+          de <em>Schubfachprinzip</em> ("principio de los cajones"). No debe
+          confundirse con otro principio sobre
+          <a href="https://es.wikipedia.org/wiki/Funci%C3%B3n_arm%C3%B3nica"
+            >funciones armónicas</a
+          >, también con el nombre de este autor.
         </p>
       </div>
-      <p class="content">
-        El <strong>principio del palomar</strong>, también llamado
-        <strong>principio de Dirichlet</strong> o
-        <strong>principio de las cajas</strong>, establece que si
-        <em>n</em> palomas se distribuyen en <em>m</em> palomares, y si
-        <em>n > m</em>, entonces al menos habrá un palomar con más de una
-        paloma. Otra forma de decirlo es que si <em>m</em> huecos pueden
-        albergar como mucho <em>m</em> objetos si cada uno de los objetos está
-        en un hueco distinto, así que el hecho de añadir otro objeto fuerza a
-        volver a utilizar alguno de los huecos. A manera de ejmplo: si se toman
-        trece personas, al menos dos habrán nacido el mismo mes.
-      </p>
-      <br />
-      <p>
-        El primer enunciado del principio se cree que proviene de
-        <a href="https://es.wikipedia.org/wiki/Peter_Gustav_Lejeune_Dirichlet"
-          >Dirichlet</a
-        >
-        en <a href="https://es.wikipedia.org/wiki/1834">1834</a> con el nombre
-        de <em>Schubfachprinzip</em> ("principio de los cajones"). No debe
-        confundirse con otro principio sobre
-        <a href="https://es.wikipedia.org/wiki/Funci%C3%B3n_arm%C3%B3nica"
-          >funciones armónicas</a
-        >, también con el nombre de este autor.
-      </p>
-    </div>
-    <div class="tindex">
-      <h2>Índice</h2>
-      <ol>
-        <li>
-          <a href="#Enunciado">Enunciado</a>
-          <ol>
-            <li>
-              <a href="#Aplicaciones">Aplicaciones</a>
-            </li>
-            <li>
-              <a href="#Enunciado_general">Enunciado general</a>
-            </li>
-          </ol>
-        </li>
-        <li>
-          <a href="#Formulacion_matematica">Formulación matemática</a>
-        </li>
-        <li>
-          <a href="#Usos_y_aplicaciones">Usos y aplicaciones</a>
-        </li>
-      </ol>
-    </div>
-    <div id="Enunciado">
-      <h2 class="title">Enunciado</h2>
-      <hr />
-      <p class="content">
-        Principio de distribución, del palomar o del cajón de la paloma de
-        Dirichlet. Sean <em>m</em>, <em>n</em> y <em>p</em> tres números
-        naturales. Si se desean colocar <em>np</em> + <em>m</em> palomas en
-        <em>n</em> cajas, alguna caja debe contener al menos <em>p</em> + 1
-        palomas.
-        <br />
-        <em>Demostración</em>
-        <br />
-        Si cada caja contiene como mucho p objetos, el número total de objetos
-        que podemos colocar es <em>np < np + 1 ≤ np + m</em>.
-        <br />
-        En su versión más simple, este principio dice que no puede existir una
-        <a href="https://es.wikipedia.org/wiki/Funci%C3%B3n_inyectiva"
-          >aplicación inyectiva</a
-        >
-        entre un conjunto de <em>m</em> elementos y otro de
-        <em>n</em> elementos, si <em>m > n</em>. Equivalentemente, si se desean
-        colocar <em>m</em> objetos en <em>n</em> cajas, con <em>m > n</em>, al
-        menos una caja debe contener al menos 2 objetos.
-      </p>
-      <h3 class="subtitle" id="Aplicaciones">Aplicaciones</h3>
-      <p>
-        Aunque el principio del palomar puede parecer una observación trivial,
-        se puede utilizar para demostrar resultados inesperados. Por ejemplo,
-        hay por lo menos 2 personas en Guatemala con el mismo número de pelos en
-        la cabeza. Demostración: la cabeza de una persona tiene en torno a
-        150.000 cabellos y tener un millón de pelos requeriría de una cabeza
-        gigante (nadie tiene un millón de pelos en la cabeza). Asignamos un
-        palomar por cada número de 0 a 1.000.000 y asignamos una paloma a cada
-        persona que irá al palomar correspondiente al número de pelos que tiene
-        en la cabeza. Como en Guatemala hay más de un millón de personas, habrá
-        al menos dos personas con el mismo número de pelos en la cabeza. De
-        hecho se puede asegurar con seguridad que en cualquier ciudad de más de
-        un millón de personas hay más de 5 personas con el mismo número de pelos
-        en la cabeza (por el principio de Dirichlet generalizado).
-      </p>
-      <h3 class="subtitle" id="Enunciado_general">Enunciado general</h3>
-      <p>
-        Una versión generalizada de este principio dice que, si
-        <em>n</em> objetos
-        <a href="https://es.wikipedia.org/wiki/Discreto">discretos</a> deben
-        guardarse en <em>m</em> cajas, al menos una caja debe contener no menos
-        de
-        <br />
-        <span class="identation"
-          >\(\lceil\frac{n}{m}\rceil\) objetos donde \(\lceil\dots\rceil\)
-          denota la función
+      <div class="tindex">
+        <h2>Índice</h2>
+        <ol>
+          <li>
+            <a href="#Enunciado">Enunciado</a>
+            <ol>
+              <li>
+                <a href="#Aplicaciones">Aplicaciones</a>
+              </li>
+              <li>
+                <a href="#Enunciado_general">Enunciado general</a>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <a href="#Formulacion_matematica">Formulación matemática</a>
+          </li>
+          <li>
+            <a href="#Usos_y_aplicaciones">Usos y aplicaciones</a>
+          </li>
+        </ol>
+      </div>
+      <div id="Enunciado">
+        <h2 class="title">Enunciado</h2>
+        <hr />
+        <p class="content">
+          Principio de distribución, del palomar o del cajón de la paloma de
+          Dirichlet. Sean <em>m</em>, <em>n</em> y <em>p</em> tres números
+          naturales. Si se desean colocar <em>np</em> + <em>m</em> palomas en
+          <em>n</em> cajas, alguna caja debe contener al menos <em>p</em> + 1
+          palomas.
+          <br />
+          <em>Demostración</em>
+          <br />
+          Si cada caja contiene como mucho p objetos, el número total de objetos
+          que podemos colocar es <em>np < np + 1 ≤ np + m</em>.
+          <br />
+          En su versión más simple, este principio dice que no puede existir una
+          <a href="https://es.wikipedia.org/wiki/Funci%C3%B3n_inyectiva"
+            >aplicación inyectiva</a
+          >
+          entre un conjunto de <em>m</em> elementos y otro de
+          <em>n</em> elementos, si <em>m > n</em>. Equivalentemente, si se
+          desean colocar <em>m</em> objetos en <em>n</em> cajas, con
+          <em>m > n</em>, al menos una caja debe contener al menos 2 objetos.
+        </p>
+        <h3 class="subtitle" id="Aplicaciones">Aplicaciones</h3>
+        <p>
+          Aunque el principio del palomar puede parecer una observación trivial,
+          se puede utilizar para demostrar resultados inesperados. Por ejemplo,
+          hay por lo menos 2 personas en Guatemala con el mismo número de pelos
+          en la cabeza. Demostración: la cabeza de una persona tiene en torno a
+          150.000 cabellos y tener un millón de pelos requeriría de una cabeza
+          gigante (nadie tiene un millón de pelos en la cabeza). Asignamos un
+          palomar por cada número de 0 a 1.000.000 y asignamos una paloma a cada
+          persona que irá al palomar correspondiente al número de pelos que
+          tiene en la cabeza. Como en Guatemala hay más de un millón de
+          personas, habrá al menos dos personas con el mismo número de pelos en
+          la cabeza. De hecho se puede asegurar con seguridad que en cualquier
+          ciudad de más de un millón de personas hay más de 5 personas con el
+          mismo número de pelos en la cabeza (por el principio de Dirichlet
+          generalizado).
+        </p>
+        <h3 class="subtitle" id="Enunciado_general">Enunciado general</h3>
+        <p>
+          Una versión generalizada de este principio dice que, si
+          <em>n</em> objetos
+          <a href="https://es.wikipedia.org/wiki/Discreto">discretos</a> deben
+          guardarse en <em>m</em> cajas, al menos una caja debe contener no
+          menos de
+          <br />
+          <span class="identation"
+            >\(\lceil\frac{n}{m}\rceil\) objetos donde \(\lceil\dots\rceil\)
+            denota la función
+            <a
+              href="https://es.wikipedia.org/wiki/Funciones_de_parte_entera#Funci%C3%B3n_techo"
+              >techo</a
+            >.</span
+          >
+          <br />
+          Además existirá otra caja que contendrá no más de
+          <br />
+          <span class="identation"
+            >\(\lfloor\frac{n}{m}\rfloor\) objetos donde \(\lfloor\dots\rfloor\)
+            denota la función
+            <a
+              href="https://es.wikipedia.org/wiki/Funciones_de_parte_entera#Funci%C3%B3n_piso/suelo/parte_entera"
+              >suelo</a
+            >.</span
+          >
+          <br />
+          Como ejemplo de aplicación en una ciudad de más de un millón de
+          habitantes habrá como mínimo 2733 personas que hayan nacido el mismo
+          día del año, ya que:
+          <br />
+          <span class="identation"
+            >\(\lceil1000000/366\rceil = \lceil2732,24\dots\rceil = 2733\)</span
+          >
+          <br />
+          Donde se ha tenido en cuenta que existen 366 posibilidades para la
+          fecha de aniversario de una persona contando la existencia de años
+          bisiestos.
+        </p>
+      </div>
+      <div id="Formulacion_matematica">
+        <h2 class="title">Formulación matemática</h2>
+        <hr />
+        <p class="content">
+          Técnicamente, el <strong>principio del palomar</strong> se corresponde
+          con la
+          <a href="https://es.wikipedia.org/wiki/Aritm%C3%A9tica_modular"
+            >aritmética modular</a
+          >, por lo que se puede dirigir a dicho artículo para profundizar en
+          aspectos técnicos.
+          <br />
+          Si \(A\) y \(B\) son conjuntos finitos con \(|A| > |B|\) entonces no
+          existe ninguna
+          <a href="https://es.wikipedia.org/wiki/Funci%C3%B3n_inyectiva"
+            >función inyectiva</a
+          >
+          de A en B.
+          <br />
+        </p>
+        <strong>Demostración por inducción:</strong>
+        <ul>
+          <li class="identation">
+            <strong>Paso base:</strong> Supongamos \(|B| = 0\), es decir, \(B =
+            \emptyset\). Entonces no existe ninguna función \(f: A\to B\), en
+            particular no existe ninguna función inyectiva.
+          </li>
+          <li class="identation">
+            <strong>Hipótesis inductiva:</strong> \(f: A\to B\) no es inyectiva
+            para todo conjunto finito \(A\) y para todo conjunto finito \(B\),
+            que cumplan \(|A| > |B|\), y \(|B| <= n\), con \(n >= 0\).
+          </li>
+          <li class="identation">
+            <strong>Tesis inductiva:</strong> Para \(|A| > |B| = n + 1\), no
+            existe una función \(f: A\to B\) inyectiva.
+          </li>
+          <li class="identation">
+            <strong>Demostración del paso inductivo:</strong> Como A no es
+            vacío, elijamos un \(a\in {\mbox{A}}\qquad\). Pueden ocurrir dos
+            cosas. O bien existe otro elemento distinto a \(a\) en A, llamémosle
+            \(a'\) que cumpla \(f(a) = f(a')\). O bien no existe tal elemento.
+            Si el caso es que existe, la función f no es inyectiva y termina la
+            demostración. Tomemos el caso que no existe, entonces f(a) tiene
+            solo una preimagen que es a. Consideramos la función \(g\colon
+            A-\{a\}\to B-\{f(a)\}\,\) que concide con f en todos los elementos
+            de A - {a}. Ahora aplicamos la hipótesis inductiva pues \(B -
+            {f(a)}\) tiene n elementos y \(\vert A-\{a\}\vert =\vert A\vert
+            -1>\vert B\vert -1=\vert B-\{f(a)\}\vert =n\), por lo tanto g no es
+            inyectiva. Como g no es inyectiva, f no es inyectiva, que es lo que
+            queríamos demostrar.
+          </li>
+        </ul>
+      </div>
+      <div id="Usos_y_aplicaciones">
+        <h2 class="title">Usos y aplicaciones</h2>
+        <hr />
+        <p class="content">
+          El principio del palomar es encontrado a menudo en informática. Por
+          ejemplo, las colisiones son inevitables en una
+          <a href="https://es.wikipedia.org/wiki/Tabla_hash">tabla hash</a>
+          porque el número de posibles valores que pueden tomar los elementos de
+          un
+          <a href="https://es.wikipedia.org/wiki/Vector_(inform%C3%A1tica)"
+            >vector</a
+          >
+          exceden a menudo el número de sus índices. Ningún algoritmo de
+          hashing, sin importar lo bueno que sea, puede evitar estas colisiones.
+          Este principio también prueba que cualquier
           <a
-            href="https://es.wikipedia.org/wiki/Funciones_de_parte_entera#Funci%C3%B3n_techo"
-            >techo</a
-          >.</span
-        >
-        <br />
-        Además existirá otra caja que contendrá no más de
-        <br />
-        <span class="identation"
-          >\(\lfloor\frac{n}{m}\rfloor\) objetos donde \(\lfloor\dots\rfloor\)
-          denota la función
-          <a
-            href="https://es.wikipedia.org/wiki/Funciones_de_parte_entera#Funci%C3%B3n_piso/suelo/parte_entera"
-            >suelo</a
-          >.</span
-        >
-        <br />
-        Como ejemplo de aplicación en una ciudad de más de un millón de
-        habitantes habrá como mínimo 2733 personas que hayan nacido el mismo día
-        del año, ya que:
-        <br />
-        <span class="identation"
-          >\(\lceil1000000/366\rceil = \lceil2732,24\dots\rceil = 2733\)</span
-        >
-        <br />
-        Donde se ha tenido en cuenta que existen 366 posibilidades para la fecha
-        de aniversario de una persona contando la existencia de años bisiestos.
-      </p>
-    </div>
-    <div id="Formulacion_matematica">
-      <h2 class="title">Formulación matemática</h2>
-      <hr />
-      <p class="content">
-        Técnicamente, el <strong>principio del palomar</strong> se corresponde
-        con la
-        <a href="https://es.wikipedia.org/wiki/Aritm%C3%A9tica_modular"
-          >aritmética modular</a
-        >, por lo que se puede dirigir a dicho artículo para profundizar en
-        aspectos técnicos.
-        <br />
-        Si \(A\) y \(B\) son conjuntos finitos con \(|A| > |B|\) entonces no
-        existe ninguna
-        <a href="https://es.wikipedia.org/wiki/Funci%C3%B3n_inyectiva"
-          >función inyectiva</a
-        >
-        de A en B.
-        <br />
-      </p>
-      <strong>Demostración por inducción:</strong>
-      <ul>
-        <li class="identation">
-          <strong>Paso base:</strong> Supongamos \(|B| = 0\), es decir, \(B =
-          \emptyset\). Entonces no existe ninguna función \(f: A\to B\), en
-          particular no existe ninguna función inyectiva.
-        </li>
-        <li class="identation">
-          <strong>Hipótesis inductiva:</strong> \(f: A\to B\) no es inyectiva
-          para todo conjunto finito \(A\) y para todo conjunto finito \(B\), que
-          cumplan \(|A| > |B|\), y \(|B| <= n\), con \(n >= 0\).
-        </li>
-        <li class="identation">
-          <strong>Tesis inductiva:</strong> Para \(|A| > |B| = n + 1\), no
-          existe una función \(f: A\to B\) inyectiva.
-        </li>
-        <li class="identation">
-          <strong>Demostración del paso inductivo:</strong> Como A no es vacío,
-          elijamos un \(a\in {\mbox{A}}\qquad\). Pueden ocurrir dos cosas. O
-          bien existe otro elemento distinto a \(a\) en A, llamémosle \(a'\) que
-          cumpla \(f(a) = f(a')\). O bien no existe tal elemento. Si el caso es
-          que existe, la función f no es inyectiva y termina la demostración.
-          Tomemos el caso que no existe, entonces f(a) tiene solo una preimagen
-          que es a. Consideramos la función \(g\colon A-\{a\}\to B-\{f(a)\}\,\)
-          que concide con f en todos los elementos de A - {a}. Ahora aplicamos
-          la hipótesis inductiva pues \(B - {f(a)}\) tiene n elementos y \(\vert
-          A-\{a\}\vert =\vert A\vert -1>\vert B\vert -1=\vert B-\{f(a)\}\vert
-          =n\), por lo tanto g no es inyectiva. Como g no es inyectiva, f no es
-          inyectiva, que es lo que queríamos demostrar.
-        </li>
-      </ul>
-    </div>
-    <div id="Usos_y_aplicaciones">
-      <h2 class="title">Usos y aplicaciones</h2>
-      <hr />
-      <p class="content">
-        El principio del palomar es encontrado a menudo en informática. Por
-        ejemplo, las colisiones son inevitables en una
-        <a href="https://es.wikipedia.org/wiki/Tabla_hash">tabla hash</a> porque
-        el número de posibles valores que pueden tomar los elementos de un
-        <a href="https://es.wikipedia.org/wiki/Vector_(inform%C3%A1tica)"
-          >vector</a
-        >
-        exceden a menudo el número de sus índices. Ningún algoritmo de hashing,
-        sin importar lo bueno que sea, puede evitar estas colisiones. Este
-        principio también prueba que cualquier
-        <a
-          href="https://es.wikipedia.org/wiki/Algoritmo_de_compresi%C3%B3n_sin_p%C3%A9rdida"
-          >algoritmo de compresión sin pérdida</a
-        >
-        que hace al menos de un archivo de entrada otro más pequeño hará que
-        otro fichero de entrada sea más grande (de lo contrario, dos archivos
-        distintos podrían ser comprimidos a un mismo archivo más pequeño y al
-        ser restaurado habría conflicto).
-      </p>
+            href="https://es.wikipedia.org/wiki/Algoritmo_de_compresi%C3%B3n_sin_p%C3%A9rdida"
+            >algoritmo de compresión sin pérdida</a
+          >
+          que hace al menos de un archivo de entrada otro más pequeño hará que
+          otro fichero de entrada sea más grande (de lo contrario, dos archivos
+          distintos podrían ser comprimidos a un mismo archivo más pequeño y al
+          ser restaurado habría conflicto).
+        </p>
+      </div>
     </div>
   </body>
 </html>
