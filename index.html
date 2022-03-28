@@ -4,14 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Futryk Fabricio - Entregas</title>
   </head>
   <body>
-    <div>
-      <h1>Trabajos</h1>
+    <div class="content">
+      <h1 class="title">Futryk Fabricio</h1>
 
-      <ul id="container"></ul>
+      <ul id="container" class="container"></ul>
     </div>
 
     <script>
@@ -28,7 +29,7 @@
         if (!tree) return;
 
         tree.forEach(async (dir) => {
-          if (dir.type === "tree") {
+          if (dir.type === "tree" && dir.path.startsWith("tp-")) {
             let readmeLink = rawLink + `${dir.path}/README.md`;
             let readmeResponse = await axios.get(readmeLink);
 
