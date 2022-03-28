@@ -41,7 +41,7 @@
 
             let title = readmeContent.split("\n").shift().replace("# ", "");
 
-            let date = readmeContent.split("\n")[1].replace("# ", "");
+            let date = readmeContent.split("\n")[2].replace("# ", "");
 
             a.innerHTML += `${dir.path.toUpperCase()} | ${title} | ${date}`;
             a.href = `./${dir.path}`;
