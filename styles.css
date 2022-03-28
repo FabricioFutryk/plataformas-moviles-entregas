@@ -61,6 +61,57 @@ body {
     content: " <<<";
 }
 
+
+@media (max-width: 575.98px) { 
+    .content {
+        margin: 1em 3em;
+    }
+
+    .title {
+        font-size: 1.75rem;
+    }
+    
+    .title::after {
+        font-size: 1rem;
+        content: "- Trabajos"
+    }
+
+    .container {
+        font-size: 1.25rem;
+        margin: .75em 2em;
+    }
+
+    .container li:hover a::after {
+        font-size: 1rem;
+        content: " <<<";
+    }
+}
+
+@media (max-width: 730px) and (min-width: 575.98px) { 
+    .content {
+        margin: 2em 4em;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+    
+    .title::after {
+        font-size: 1.50rem;
+        content: "- Trabajos"
+    }
+
+    .container {
+        font-size: 1.75rem;
+        margin: 1em 2em;
+    }
+
+    .container li:hover a::after {
+        font-size: 1.50rem;
+        content: " <<<";
+    }
+}
+
 @keyframes pulse { 
     0%{ opacity:.9;transform: skewX(.5deg);}
     25%{ opacity:1;}
