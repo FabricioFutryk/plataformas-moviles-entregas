@@ -15,7 +15,7 @@
 body {
     font-family: 'Cezanne DB', sans-serif;
     background: url('../media/background.webp') center no-repeat fixed;
-    background-color: rgba(0,0,0,0);
+    background-color: #000000;
     background-blend-mode: multiply;
     -webkit-background-size: cover;
     -moz-background-size: cover;
