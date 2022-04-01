@@ -14,14 +14,13 @@
 
 body {
     font-family: 'Cezanne DB', sans-serif;
-    background-color: #000000;
+    background-color: #000000f7;
     background: url('../media/background.webp') center no-repeat fixed;
     background-blend-mode: multiply;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    animation: backgroundPulse 15ms ease infinite;
 }
 
 .title {
@@ -71,6 +70,7 @@ body {
     width: 100%;
     height: 100%;
     box-shadow: 0 0 200px rgba(0,0,0,1) inset;
+    animation: backgroundPulse 15ms ease infinite;
 }
 
 @keyframes backgroundPulse { 
