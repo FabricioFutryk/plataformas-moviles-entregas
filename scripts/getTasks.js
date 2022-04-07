@@ -33,13 +33,14 @@ const getTasks = async () => {
       li.appendChild(a);
       container.appendChild(li);
 
-      function typeWriter() {
+      const typeWriter = () => {
         if (i < text.length) {
           a.innerHTML += text.charAt(i);
           i++;
+
           setTimeout(typeWriter, writingSpeed);
         }
-      }
+      };
 
       typeWriter();
     }
