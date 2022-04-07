@@ -20,7 +20,7 @@ p {
     font-family: sans-serif;
 }
 
-p::first-line {
+p:first-of-type:first-line {
     color: #efe;
 }
 
