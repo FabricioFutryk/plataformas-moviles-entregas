@@ -16,8 +16,9 @@ body {
     }    
 }
 
-@media not(color) {
+@media (color: 0) {
     #wikipedia-logo {
+        display: none;
         visibility: hidden;
     }
 }
