@@ -12,20 +12,22 @@ const validKeys = [
 ];
 
 let currInput = "";
+let done = false;
 
 const checkEasterEgg = (ev) => {
-  if (!validKeys.includes(btoa(ev.key))) return;
+  if (!validKeys.includes(btoa(ev.key)) || done) return;
   currInput += btoa(ev.key);
 
-  if (currInput === easterEgg) {
+  if (currInput.includes(easterEgg)) {
     alert("Easter Egg Unlocked!");
     container.innerHTML +=
       "<audio id='audio' autoplay><source src='./media/easteregg.ogg' type='audio/ogg'></audio>";
 
     document.getElementById("audio").volume = 0.1;
+    done = true;
   }
 
-  if (currInput.length >= easterEgg.length) {
+  if (currInput.length >= easterEgg.length * 4) {
     currInput = "";
   }
 };
