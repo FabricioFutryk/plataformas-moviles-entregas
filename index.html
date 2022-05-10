@@ -1,29 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/styles.css" />
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <title>Futryk Fabricio - Entregas</title>
-  </head>
-  <body>
-    <div class="content">
-      <div class="vignette"></div>
-      <h1 class="title">Futryk Fabricio</h1>
 
-      <ul id="container" class="container"></ul>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <title>Futryk Fabricio - Entregas</title>
+</head>
 
-    <script src="./scripts/checkEasterEgg.js"></script>
-    <script src="./scripts/getTasks.js"></script>
+<body>
+  <div class="content">
+    <div class="vignette"></div>
+    <h1 class="title">Futryk Fabricio</h1>
 
-    <script>
-      let container = document.getElementById("container");
-      getTasks();
+    <ul id="container" class="container"></ul>
+  </div>
 
-      document.addEventListener("keyup", checkEasterEgg);
-    </script>
-  </body>
+  <script src="./scripts/checkEasterEgg.js"></script>
+  <script src="./scripts/getTasks.js"></script>
+
+  <script>
+    const writingSpeed = 50;
+    let container = document.getElementById("container");
+
+    getActivities().then(activities => {
+      activities.forEach(activity => {
+        let i = 0;
+        let element = container.appendChild(activity.buildElement())
+
+        const typeWriter = () => {
+          if (i < activity.text.length) {
+            element.children[0].textContent += activity.text.charAt(i);
+            i++;
+
+            setTimeout(typeWriter, writingSpeed);
+          }
+        };
+
+        typeWriter();
+      });
+    })
+
+    document.addEventListener("keyup", checkEasterEgg);
+  </script>
+</body>
+
 </html>

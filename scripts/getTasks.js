@@ -3,46 +3,53 @@ const apiLink =
 const rawLink =
   "https://raw.githubusercontent.com/futrykfabricio/plataformas-moviles-entregas/master/";
 
-const writingSpeed = 25;
+class Activity {
+  constructor(readmeContent, path) {
+    this.name = readmeContent.split("\n").shift().replace("# ", "");
+    this.date = readmeContent.split("\n")[2].replace("# ", "");
+    this.path = path;
+    this.text = `${this.path.toUpperCase()} | ${this.name} | ${this.date}.`;
+  }
 
-const getTasks = async () => {
+  buildElement() {
+    let li = document.createElement("li");
+    let a = document.createElement("a");
+
+    a.href = `./${this.path}`;
+
+    li.appendChild(a);
+
+    return li;
+  }
+}
+
+const dirHandler = async (dir) => {
+  if (dir.type === "tree" && dir.path.startsWith("tp-")) {
+    let readmeLink = rawLink + `${dir.path}/README.md`;
+    let readmeResponse = await axios.get(readmeLink);
+
+    if (!readmeResponse) return;
+
+    const readmeContent = readmeResponse.data;
+    return new Activity(readmeContent, dir.path);
+  }
+};
+
+const getActivities = async () => {
   let res = await axios.get(apiLink);
   const tree = res.data.tree;
 
   if (!tree) return;
 
-  tree.forEach(async (dir) => {
-    if (dir.type === "tree" && dir.path.startsWith("tp-")) {
-      let readmeLink = rawLink + `${dir.path}/README.md`;
-      let readmeResponse = await axios.get(readmeLink);
+  const githubFolders = tree.map((dir) => dirHandler(dir));
+  const activities = (await Promise.all(githubFolders)).filter(
+    (value) => value
+  );
 
-      if (!readmeResponse) return;
+  return activities.sort((a, b) => {
+    let output = 0;
+    a.path < b.path ? (output = -1) : (output = 1);
 
-      const readmeContent = readmeResponse.data;
-
-      let li = document.createElement("li");
-      let a = document.createElement("a");
-      let i = 0;
-
-      let title = readmeContent.split("\n").shift().replace("# ", "");
-      let date = readmeContent.split("\n")[2].replace("# ", "");
-      let text = `${dir.path.toUpperCase()} | ${title} | ${date}.`;
-
-      a.href = `./${dir.path}`;
-
-      li.appendChild(a);
-      container.appendChild(li);
-
-      const typeWriter = () => {
-        if (i < text.length) {
-          a.innerHTML += text.charAt(i);
-          i++;
-
-          setTimeout(typeWriter, writingSpeed);
-        }
-      };
-
-      typeWriter();
-    }
+    return output;
   });
 };
