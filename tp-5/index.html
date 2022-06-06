@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Trabajo Practico N°5</title>
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="30"
+                    height="24" class="d-inline-block align-text-top">
+                Fabricio Futryk
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#form">Form</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#carousel">Carousel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#articles">Articles</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="container">
+        <div class="row mt-4">
+            <div class="col-12 col-sm-6 col-lg-3 mt-4">
+                <div class="card w-100">
+                    <img src="https://picsum.photos/1080/1080" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Lorem ipsum</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse soluta
+                            eveniet quam ipsum nobis! Sint facere, aspernatur mollitia veniam iure placeat fugiat sunt
+                            pariatur sapiente amet quisquam nam porro distinctio!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 mt-4">
+                <div class="card w-100">
+                    <img src="https://picsum.photos/1080/1080" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Lorem ipsum</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse soluta
+                            eveniet quam ipsum nobis! Sint facere, aspernatur mollitia veniam iure placeat fugiat sunt
+                            pariatur sapiente amet quisquam nam porro distinctio!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 mt-4">
+                <div class="card w-100">
+                    <img src="https://picsum.photos/1080/1080" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Lorem ipsum</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse soluta
+                            eveniet quam ipsum nobis! Sint facere, aspernatur mollitia veniam iure placeat fugiat sunt
+                            pariatur sapiente amet quisquam nam porro distinctio!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 mt-4">
+                <div class="card w-100">
+                    <img src="https://picsum.photos/1080/1080" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Lorem ipsum</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse soluta
+                            eveniet quam ipsum nobis! Sint facere, aspernatur mollitia veniam iure placeat fugiat sunt
+                            pariatur sapiente amet quisquam nam porro distinctio!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="form" class="container">
+        <div class="row mt-4">
+            <div class="col">
+                <form>
+                    <div class="form-group row mb-3">
+                        <label for="inputName" class="col-lg-2 col-form-label">Nombre</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="inputName" placeholder="Nombre">
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <label for="inputEmail3" class="col-lg-2 col-form-label">Email</label>
+                        <div class="col-lg-10">
+                            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <label for="messageInput" class="col-lg-2 col-form-label">Mensaje</label>
+                        <div class="col-lg-10">
+                            <textarea class="form-control" placeholder="Escribe tu mensaje" id="messageInput"
+                                style="height: 100px"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row mt-4">
+                        <div class="col-6 offset-lg-2 col-lg-5">
+                            <button type="submit" class="btn btn-primary w-100">Submit</button>
+                        </div>
+                        <div class="col-6 col-lg-5">
+                            <button type="reset" class="btn btn-secondary w-100">Cancel</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="carousel" class="container-fluid p-0 w-100 mt-5">
+        <div id="carouselExampleIndicators" class="carousel slide w-100" data-bs-ride="true">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://picsum.photos/1080/300" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://picsum.photos/1080/300" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://picsum.photos/1080/300" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+
+    <section id="articles" class="container mt-4">
+        <div class="row">
+            <div class="col-12">
+                <article class="w-100 text-center">
+                    <h1 class="text-capitalize">Lorem ipsum</h1>
+                    <p class="text-muted">Metadata</p>
+                    <p class="mt-4" style="text-align: justify;">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod qui deleniti quis perspiciatis
+                        aperiam similique eaque! Molestias, officiis nostrum quisquam doloribus, fuga assumenda,
+                        nesciunt
+                        eos molestiae velit quaerat earum cupiditate?
+                        Amet, reprehenderit eaque. Natus ipsum, unde rem sint labore velit adipisci expedita quos
+                        deleniti
+                        ducimus dignissimos sed blanditiis accusamus. Maxime, dignissimos culpa laudantium pariatur ut
+                        nemo
+                        officiis consequatur temporibus libero!
+                        Quidem ad possimus itaque voluptate soluta perspiciatis? Aperiam sint id explicabo, beatae
+                        magnam
+                        quaerat hic rem? Est quis ea aliquam corrupti adipisci maxime voluptas aperiam aut laboriosam?
+                        Optio, quis quibusdam.
+                        Alias ipsa ab ut ex eius non provident asperiores eveniet praesentium quae. Cum, ullam magni
+                        voluptate eligendi soluta vero autem alias quos error quia numquam corrupti asperiores. Unde,
+                        delectus quae.
+                        Esse error quasi, praesentium debitis commodi eligendi alias at omnis illo neque? Ad soluta qui,
+                        saepe ipsum consectetur, cumque aspernatur magni consequuntur, tempora odio explicabo animi
+                        voluptatem corrupti repudiandae aperiam.
+                        Illum, perferendis odio nisi ab maiores quisquam expedita iste, assumenda dolore exercitationem
+                        labore ipsum. Autem cumque quisquam illo recusandae ullam accusamus placeat, fugit itaque odio
+                        sequi
+                        eius laudantium incidunt architecto!
+                        Repellendus aliquid alias necessitatibus voluptatem tempora fuga officia aperiam impedit.
+                        Reprehenderit harum sapiente tempore adipisci earum corrupti, quod eum rerum accusantium!
+                        Molestias
+                        cupiditate nisi, impedit dolore porro dolorem aliquam eveniet?
+                        Aperiam iusto sint odio dolorum perspiciatis provident suscipit voluptas tempore quas impedit
+                        voluptatibus dolor qui eligendi, doloribus minima tenetur, est delectus nostrum. Expedita quam
+                        aliquam architecto quis, nulla consequuntur cumque.
+                        Voluptatem perspiciatis vel impedit esse quae laboriosam blanditiis velit distinctio quidem
+                        iusto
+                        dolorum consequatur, reprehenderit culpa facere aut necessitatibus reiciendis corrupti tempora
+                        voluptatum fuga odit quam perferendis! In, accusantium enim?
+                        Accusantium, impedit fuga cum asperiores adipisci ad esse corporis culpa reiciendis consequatur
+                        atque, quis placeat perferendis velit repudiandae dolor delectus quibusdam provident
+                        exercitationem
+                        sequi quia. Consequuntur quae a architecto quia!
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container-fluid p-0 mt-4">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12 col-lg-4">Lorem ipsum 1</div>
+                <div class="col-12 col-sm-6 col-lg-4">Lorem ipsum 2</div>
+                <div class="col-12 col-sm-6 col-lg-4">Lorem ipsum 3</div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

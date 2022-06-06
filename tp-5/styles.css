@@ -1,0 +1,8 @@
+/* El pseudo-elemento es para que al hacer clic en un link de la navbar
+ * la navbar no cubra una parte de la seccion a la que se quiere ir
+ */
+section::before {
+    height: 54px;
+    content: "";
+    display: block;
+}
