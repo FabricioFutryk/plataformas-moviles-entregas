@@ -1,6 +1,6 @@
 # Pantallas Responsivas Bootstrap
 
-16/05/2022
+06/06/2022
 
 ## Consigna
 
