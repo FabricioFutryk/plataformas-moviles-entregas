@@ -1,4 +1,4 @@
-# Fucniones
+# Funciones
 
 17/07/2022
 
