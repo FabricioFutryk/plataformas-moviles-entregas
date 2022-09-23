@@ -1,0 +1,462 @@
+/* La mayoria estilos no fueron escritos a mano, se utilizó el siguiente codigo JS
+    const types = [
+      "normal",
+      "fighting",
+      "flying",
+      "poison",
+      "ground",
+      "rock",
+      "bug",
+      "ghost",
+      "steel",
+      "fire",
+      "water",
+      "grass",
+      "electric",
+      "psychic",
+      "ice",
+      "dragon",
+      "dark",
+      "fairy",
+      "unknown",
+      "shadow",
+    ];
+
+    for (const type of types) {
+      console.log(
+        `.type-${type}{background-color: var(--${type}); color: #FFF; border-radius: 8px; padding: 2px 20px; text-transform: uppercase; font-weight: 900; margin: 5px;}`
+      );
+      console.log(`.border-${type} {border-color: var(--${type});}`);
+    }
+
+    for (const firstType of types) {
+      for (const secondType of types) {
+        if (firstType === "unknown" || secondType == "unknown") continue;
+        if (firstType === secondType) continue;
+        console.log(
+          `.border-${firstType}-to-${secondType} {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--${firstType}), var(--${secondType}));}`
+        );
+      }
+    }
+*/
+
+:root {
+    --normal: #A8A77A;
+    --fighting: #C22E28;
+    --flying: #A98FF3;
+    --poison: #A33EA1;
+    --ground: #E2BF65;
+    --rock: #B6A136;
+    --bug: #A6B91A;
+    --ghost: #735797;
+    --steel: #B7B7CE;
+    --fire: #EE8130;
+    --water: #6390F0;
+    --grass: #7AC74C;
+    --electric: #F7D02C;
+    --psychic: #F95587;
+    --ice: #96D9D6;
+    --dragon: #6F35FC;
+    --dark: #FF00FF;
+    --fairy: #D685AD;
+    --unknown: #FFFFFF;
+    --shadow: #705746;
+    
+    --degrees: 120deg;
+}
+
+.border-normal {border-color: var(--normal);}
+.border-fighting {border-color: var(--fighting);}
+.border-flying {border-color: var(--flying);}
+.border-poison {border-color: var(--poison);}
+.border-ground {border-color: var(--ground);}
+.border-rock {border-color: var(--rock);}
+.border-bug {border-color: var(--bug);}
+.border-ghost {border-color: var(--ghost);}
+.border-steel {border-color: var(--steel);}
+.border-fire {border-color: var(--fire);}
+.border-water {border-color: var(--water);}
+.border-grass {border-color: var(--grass);}
+.border-electric {border-color: var(--electric);}
+.border-psychic {border-color: var(--psychic);}
+.border-ice {border-color: var(--ice);}
+.border-dragon {border-color: var(--dragon);}
+.border-dark {border-color: var(--dark);}
+.border-fairy {border-color: var(--fairy);}
+.border-unknown {border-color: var(--unknown);}
+.border-shadow {border-color: var(--shadow);}
+.stat-hp::before {content: "HP"; margin-right: 5px; font-weight: 900;}
+.stat-attack::before {content: "ATK"; margin-right: 5px; font-weight: 900;}
+.stat-defense::before {content: "DEF"; margin-right: 5px; font-weight: 900;}
+.stat-speed::before {content: "SPD"; margin-right: 5px; font-weight: 900;}
+.stat-special-attack::before {content: "SP.A"; margin-right: 5px; font-weight: 900;}
+.stat-special-defense::before {content: "SP.D"; margin-right: 5px; font-weight: 900;}
+.stat-hp {background-color: #ff5959; padding: 2px 4px; border-radius: 8px; font-weight: 600; color: #FFF;}
+.stat-attack { background-color: #f5ac79; padding: 2px 4px; border-radius: 8px; font-weight: 600; color: #FFF;}
+.stat-defense {background-color: #f9e079; padding: 2px 4px; border-radius: 8px; font-weight: 600; color: #FFF;}
+.stat-speed {background-color: skyblue; padding: 2px 4px; border-radius: 8px; font-weight: 600; color: #FFF;}
+.stat-special-attack {background-color: #9db7f4; padding: 2px 4px; border-radius: 8px; font-weight: 600; color: #FFF;}
+.stat-special-defense {background-color: #a7db90; padding: 2px 4px; border-radius: 8px; font-weight: 600; color: #FFF;}
+.type-normal{background-color: var(--normal); color: #FFF; border-radius: 8px; padding: 2px 20px; text-transform: uppercase; font-weight: 900;}
+.type-fighting{background-color: var(--fighting); color: #FFF; border-radius: 8px; padding: 2px 20px; text-transform: uppercase; font-weight: 900;}
+.type-flying{background-color: var(--flying); color: #FFF; border-radius: 8px; padding: 2px 20px; text-transform: uppercase; font-weight: 900;}
+.type-poison{background-color: var(--poison); color: #FFF; border-radius: 8px; padding: 2px 20px; text-transform: uppercase; font-weight: 900;}
+.type-ground{background-color: var(--ground); color: #FFF; border-radius: 8px; padding: 2px 20px; text-transform: uppercase; font-weight: 900;}
+.type-rock{background-color: var(--rock); color: #FFF; border-radius: 8px; padding: 2px 20px; text-transform: uppercase; font-weight: 900;}
+.type-bug{background-color: var(--bug); color: #FFF; border-radius: 8px; padding: 2px 20px; text-transform: uppercase; font-weight: 900;}
+.type-ghost{background-color: var(--ghost); color: #FFF; border-radius: 8px; padding: 2px 20px; text-transform: uppercase; font-weight: 900;}
+.type-steel{background-color: var(--steel); color: #FFF; border-radius: 8px; padding: 2px 20px; text-transform: uppercase; font-weight: 900;}
+.type-fire{background-color: var(--fire); color: #FFF; border-radius: 8px; padding: 2px 20px; text-transform: uppercase; font-weight: 900;}
+.type-water{background-color: var(--water); color: #FFF; border-radius: 8px; padding: 2px 20px; text-transform: uppercase; font-weight: 900;}
+.type-grass{background-color: var(--grass); color: #FFF; border-radius: 8px; padding: 2px 20px; text-transform: uppercase; font-weight: 900;}
+.type-electric{background-color: var(--electric); color: #FFF; border-radius: 8px; padding: 2px 20px; text-transform: uppercase; font-weight: 900;}
+.type-psychic{background-color: var(--psychic); color: #FFF; border-radius: 8px; padding: 2px 20px; text-transform: uppercase; font-weight: 900;}
+.type-ice{background-color: var(--ice); color: #FFF; border-radius: 8px; padding: 2px 20px; text-transform: uppercase; font-weight: 900;}
+.type-dragon{background-color: var(--dragon); color: #FFF; border-radius: 8px; padding: 2px 20px; text-transform: uppercase; font-weight: 900;}
+.type-dark{background-color: var(--dark); color: #FFF; border-radius: 8px; padding: 2px 20px; text-transform: uppercase; font-weight: 900;}
+.type-fairy{background-color: var(--fairy); color: #FFF; border-radius: 8px; padding: 2px 20px; text-transform: uppercase; font-weight: 900;}
+.type-unknown{background-color: var(--unknown); color: #FFF; border-radius: 8px; padding: 2px 20px; text-transform: uppercase; font-weight: 900;}
+.type-shadow{background-color: var(--shadow); color: #FFF; border-radius: 8px; padding: 2px 20px; text-transform: uppercase; font-weight: 900;}
+.rounded-type-border {background-origin: border-box;background-clip: padding-box, border-box;}
+.border-normal-to-fighting {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--normal), var(--fighting));}
+.border-normal-to-flying {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--normal), var(--flying));}
+.border-normal-to-poison {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--normal), var(--poison));}
+.border-normal-to-ground {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--normal), var(--ground));}
+.border-normal-to-rock {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--normal), var(--rock));}
+.border-normal-to-bug {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--normal), var(--bug));}
+.border-normal-to-ghost {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--normal), var(--ghost));}
+.border-normal-to-steel {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--normal), var(--steel));}
+.border-normal-to-fire {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--normal), var(--fire));}
+.border-normal-to-water {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--normal), var(--water));}
+.border-normal-to-grass {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--normal), var(--grass));}
+.border-normal-to-electric {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--normal), var(--electric));}
+.border-normal-to-psychic {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--normal), var(--psychic));}
+.border-normal-to-ice {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--normal), var(--ice));}
+.border-normal-to-dragon {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--normal), var(--dragon));}
+.border-normal-to-dark {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--normal), var(--dark));}
+.border-normal-to-fairy {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--normal), var(--fairy));}
+.border-normal-to-shadow {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--normal), var(--shadow));}
+.border-fighting-to-normal {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fighting), var(--normal));}
+.border-fighting-to-flying {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fighting), var(--flying));}
+.border-fighting-to-poison {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fighting), var(--poison));}
+.border-fighting-to-ground {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fighting), var(--ground));}
+.border-fighting-to-rock {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fighting), var(--rock));}
+.border-fighting-to-bug {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fighting), var(--bug));}
+.border-fighting-to-ghost {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fighting), var(--ghost));}
+.border-fighting-to-steel {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fighting), var(--steel));}
+.border-fighting-to-fire {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fighting), var(--fire));}
+.border-fighting-to-water {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fighting), var(--water));}
+.border-fighting-to-grass {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fighting), var(--grass));}
+.border-fighting-to-electric {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fighting), var(--electric));}
+.border-fighting-to-psychic {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fighting), var(--psychic));}
+.border-fighting-to-ice {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fighting), var(--ice));}
+.border-fighting-to-dragon {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fighting), var(--dragon));}
+.border-fighting-to-dark {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fighting), var(--dark));}
+.border-fighting-to-fairy {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fighting), var(--fairy));}
+.border-fighting-to-shadow {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fighting), var(--shadow));}
+.border-flying-to-normal {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--flying), var(--normal));}
+.border-flying-to-fighting {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--flying), var(--fighting));}
+.border-flying-to-poison {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--flying), var(--poison));}
+.border-flying-to-ground {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--flying), var(--ground));}
+.border-flying-to-rock {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--flying), var(--rock));}
+.border-flying-to-bug {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--flying), var(--bug));}
+.border-flying-to-ghost {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--flying), var(--ghost));}
+.border-flying-to-steel {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--flying), var(--steel));}
+.border-flying-to-fire {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--flying), var(--fire));}
+.border-flying-to-water {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--flying), var(--water));}
+.border-flying-to-grass {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--flying), var(--grass));}
+.border-flying-to-electric {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--flying), var(--electric));}
+.border-flying-to-psychic {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--flying), var(--psychic));}
+.border-flying-to-ice {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--flying), var(--ice));}
+.border-flying-to-dragon {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--flying), var(--dragon));}
+.border-flying-to-dark {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--flying), var(--dark));}
+.border-flying-to-fairy {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--flying), var(--fairy));}
+.border-flying-to-shadow {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--flying), var(--shadow));}
+.border-poison-to-normal {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--poison), var(--normal));}
+.border-poison-to-fighting {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--poison), var(--fighting));}
+.border-poison-to-flying {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--poison), var(--flying));}
+.border-poison-to-ground {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--poison), var(--ground));}
+.border-poison-to-rock {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--poison), var(--rock));}
+.border-poison-to-bug {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--poison), var(--bug));}
+.border-poison-to-ghost {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--poison), var(--ghost));}
+.border-poison-to-steel {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--poison), var(--steel));}
+.border-poison-to-fire {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--poison), var(--fire));}
+.border-poison-to-water {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--poison), var(--water));}
+.border-poison-to-grass {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--poison), var(--grass));}
+.border-poison-to-electric {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--poison), var(--electric));}
+.border-poison-to-psychic {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--poison), var(--psychic));}
+.border-poison-to-ice {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--poison), var(--ice));}
+.border-poison-to-dragon {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--poison), var(--dragon));}
+.border-poison-to-dark {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--poison), var(--dark));}
+.border-poison-to-fairy {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--poison), var(--fairy));}
+.border-poison-to-shadow {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--poison), var(--shadow));}
+.border-ground-to-normal {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ground), var(--normal));}
+.border-ground-to-fighting {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ground), var(--fighting));}
+.border-ground-to-flying {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ground), var(--flying));}
+.border-ground-to-poison {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ground), var(--poison));}
+.border-ground-to-rock {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ground), var(--rock));}
+.border-ground-to-bug {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ground), var(--bug));}
+.border-ground-to-ghost {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ground), var(--ghost));}
+.border-ground-to-steel {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ground), var(--steel));}
+.border-ground-to-fire {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ground), var(--fire));}
+.border-ground-to-water {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ground), var(--water));}
+.border-ground-to-grass {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ground), var(--grass));}
+.border-ground-to-electric {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ground), var(--electric));}
+.border-ground-to-psychic {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ground), var(--psychic));}
+.border-ground-to-ice {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ground), var(--ice));}
+.border-ground-to-dragon {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ground), var(--dragon));}
+.border-ground-to-dark {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ground), var(--dark));}
+.border-ground-to-fairy {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ground), var(--fairy));}
+.border-ground-to-shadow {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ground), var(--shadow));}
+.border-rock-to-normal {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--rock), var(--normal));}
+.border-rock-to-fighting {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--rock), var(--fighting));}
+.border-rock-to-flying {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--rock), var(--flying));}
+.border-rock-to-poison {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--rock), var(--poison));}
+.border-rock-to-ground {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--rock), var(--ground));}
+.border-rock-to-bug {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--rock), var(--bug));}
+.border-rock-to-ghost {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--rock), var(--ghost));}
+.border-rock-to-steel {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--rock), var(--steel));}
+.border-rock-to-fire {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--rock), var(--fire));}
+.border-rock-to-water {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--rock), var(--water));}
+.border-rock-to-grass {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--rock), var(--grass));}
+.border-rock-to-electric {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--rock), var(--electric));}
+.border-rock-to-psychic {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--rock), var(--psychic));}
+.border-rock-to-ice {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--rock), var(--ice));}
+.border-rock-to-dragon {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--rock), var(--dragon));}
+.border-rock-to-dark {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--rock), var(--dark));}
+.border-rock-to-fairy {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--rock), var(--fairy));}
+.border-rock-to-shadow {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--rock), var(--shadow));}
+.border-bug-to-normal {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--bug), var(--normal));}
+.border-bug-to-fighting {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--bug), var(--fighting));}
+.border-bug-to-flying {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--bug), var(--flying));}
+.border-bug-to-poison {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--bug), var(--poison));}
+.border-bug-to-ground {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--bug), var(--ground));}
+.border-bug-to-rock {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--bug), var(--rock));}
+.border-bug-to-ghost {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--bug), var(--ghost));}
+.border-bug-to-steel {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--bug), var(--steel));}
+.border-bug-to-fire {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--bug), var(--fire));}
+.border-bug-to-water {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--bug), var(--water));}
+.border-bug-to-grass {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--bug), var(--grass));}
+.border-bug-to-electric {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--bug), var(--electric));}
+.border-bug-to-psychic {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--bug), var(--psychic));}
+.border-bug-to-ice {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--bug), var(--ice));}
+.border-bug-to-dragon {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--bug), var(--dragon));}
+.border-bug-to-dark {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--bug), var(--dark));}
+.border-bug-to-fairy {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--bug), var(--fairy));}
+.border-bug-to-shadow {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--bug), var(--shadow));}
+.border-ghost-to-normal {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ghost), var(--normal));}
+.border-ghost-to-fighting {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ghost), var(--fighting));}
+.border-ghost-to-flying {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ghost), var(--flying));}
+.border-ghost-to-poison {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ghost), var(--poison));}
+.border-ghost-to-ground {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ghost), var(--ground));}
+.border-ghost-to-rock {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ghost), var(--rock));}
+.border-ghost-to-bug {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ghost), var(--bug));}
+.border-ghost-to-steel {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ghost), var(--steel));}
+.border-ghost-to-fire {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ghost), var(--fire));}
+.border-ghost-to-water {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ghost), var(--water));}
+.border-ghost-to-grass {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ghost), var(--grass));}
+.border-ghost-to-electric {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ghost), var(--electric));}
+.border-ghost-to-psychic {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ghost), var(--psychic));}
+.border-ghost-to-ice {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ghost), var(--ice));}
+.border-ghost-to-dragon {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ghost), var(--dragon));}
+.border-ghost-to-dark {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ghost), var(--dark));}
+.border-ghost-to-fairy {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ghost), var(--fairy));}
+.border-ghost-to-shadow {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ghost), var(--shadow));}
+.border-steel-to-normal {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--steel), var(--normal));}
+.border-steel-to-fighting {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--steel), var(--fighting));}
+.border-steel-to-flying {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--steel), var(--flying));}
+.border-steel-to-poison {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--steel), var(--poison));}
+.border-steel-to-ground {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--steel), var(--ground));}
+.border-steel-to-rock {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--steel), var(--rock));}
+.border-steel-to-bug {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--steel), var(--bug));}
+.border-steel-to-ghost {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--steel), var(--ghost));}
+.border-steel-to-fire {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--steel), var(--fire));}
+.border-steel-to-water {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--steel), var(--water));}
+.border-steel-to-grass {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--steel), var(--grass));}
+.border-steel-to-electric {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--steel), var(--electric));}
+.border-steel-to-psychic {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--steel), var(--psychic));}
+.border-steel-to-ice {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--steel), var(--ice));}
+.border-steel-to-dragon {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--steel), var(--dragon));}
+.border-steel-to-dark {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--steel), var(--dark));}
+.border-steel-to-fairy {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--steel), var(--fairy));}
+.border-steel-to-shadow {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--steel), var(--shadow));}
+.border-fire-to-normal {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fire), var(--normal));}
+.border-fire-to-fighting {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fire), var(--fighting));}
+.border-fire-to-flying {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fire), var(--flying));}
+.border-fire-to-poison {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fire), var(--poison));}
+.border-fire-to-ground {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fire), var(--ground));}
+.border-fire-to-rock {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fire), var(--rock));}
+.border-fire-to-bug {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fire), var(--bug));}
+.border-fire-to-ghost {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fire), var(--ghost));}
+.border-fire-to-steel {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fire), var(--steel));}
+.border-fire-to-water {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fire), var(--water));}
+.border-fire-to-grass {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fire), var(--grass));}
+.border-fire-to-electric {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fire), var(--electric));}
+.border-fire-to-psychic {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fire), var(--psychic));}
+.border-fire-to-ice {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fire), var(--ice));}
+.border-fire-to-dragon {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fire), var(--dragon));}
+.border-fire-to-dark {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fire), var(--dark));}
+.border-fire-to-fairy {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fire), var(--fairy));}
+.border-fire-to-shadow {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fire), var(--shadow));}
+.border-water-to-normal {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--water), var(--normal));}
+.border-water-to-fighting {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--water), var(--fighting));}
+.border-water-to-flying {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--water), var(--flying));}
+.border-water-to-poison {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--water), var(--poison));}
+.border-water-to-ground {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--water), var(--ground));}
+.border-water-to-rock {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--water), var(--rock));}
+.border-water-to-bug {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--water), var(--bug));}
+.border-water-to-ghost {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--water), var(--ghost));}
+.border-water-to-steel {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--water), var(--steel));}
+.border-water-to-fire {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--water), var(--fire));}
+.border-water-to-grass {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--water), var(--grass));}
+.border-water-to-electric {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--water), var(--electric));}
+.border-water-to-psychic {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--water), var(--psychic));}
+.border-water-to-ice {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--water), var(--ice));}
+.border-water-to-dragon {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--water), var(--dragon));}
+.border-water-to-dark {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--water), var(--dark));}
+.border-water-to-fairy {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--water), var(--fairy));}
+.border-water-to-shadow {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--water), var(--shadow));}
+.border-grass-to-normal {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--grass), var(--normal));}
+.border-grass-to-fighting {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--grass), var(--fighting));}
+.border-grass-to-flying {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--grass), var(--flying));}
+.border-grass-to-poison {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--grass), var(--poison));}
+.border-grass-to-ground {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--grass), var(--ground));}
+.border-grass-to-rock {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--grass), var(--rock));}
+.border-grass-to-bug {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--grass), var(--bug));}
+.border-grass-to-ghost {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--grass), var(--ghost));}
+.border-grass-to-steel {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--grass), var(--steel));}
+.border-grass-to-fire {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--grass), var(--fire));}
+.border-grass-to-water {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--grass), var(--water));}
+.border-grass-to-electric {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--grass), var(--electric));}
+.border-grass-to-psychic {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--grass), var(--psychic));}
+.border-grass-to-ice {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--grass), var(--ice));}
+.border-grass-to-dragon {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--grass), var(--dragon));}
+.border-grass-to-dark {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--grass), var(--dark));}
+.border-grass-to-fairy {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--grass), var(--fairy));}
+.border-grass-to-shadow {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--grass), var(--shadow));}
+.border-electric-to-normal {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--electric), var(--normal));}
+.border-electric-to-fighting {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--electric), var(--fighting));}
+.border-electric-to-flying {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--electric), var(--flying));}
+.border-electric-to-poison {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--electric), var(--poison));}
+.border-electric-to-ground {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--electric), var(--ground));}
+.border-electric-to-rock {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--electric), var(--rock));}
+.border-electric-to-bug {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--electric), var(--bug));}
+.border-electric-to-ghost {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--electric), var(--ghost));}
+.border-electric-to-steel {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--electric), var(--steel));}
+.border-electric-to-fire {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--electric), var(--fire));}
+.border-electric-to-water {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--electric), var(--water));}
+.border-electric-to-grass {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--electric), var(--grass));}
+.border-electric-to-psychic {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--electric), var(--psychic));}
+.border-electric-to-ice {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--electric), var(--ice));}
+.border-electric-to-dragon {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--electric), var(--dragon));}
+.border-electric-to-dark {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--electric), var(--dark));}
+.border-electric-to-fairy {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--electric), var(--fairy));}
+.border-electric-to-shadow {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--electric), var(--shadow));}
+.border-psychic-to-normal {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--psychic), var(--normal));}
+.border-psychic-to-fighting {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--psychic), var(--fighting));}
+.border-psychic-to-flying {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--psychic), var(--flying));}
+.border-psychic-to-poison {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--psychic), var(--poison));}
+.border-psychic-to-ground {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--psychic), var(--ground));}
+.border-psychic-to-rock {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--psychic), var(--rock));}
+.border-psychic-to-bug {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--psychic), var(--bug));}
+.border-psychic-to-ghost {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--psychic), var(--ghost));}
+.border-psychic-to-steel {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--psychic), var(--steel));}
+.border-psychic-to-fire {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--psychic), var(--fire));}
+.border-psychic-to-water {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--psychic), var(--water));}
+.border-psychic-to-grass {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--psychic), var(--grass));}
+.border-psychic-to-electric {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--psychic), var(--electric));}
+.border-psychic-to-ice {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--psychic), var(--ice));}
+.border-psychic-to-dragon {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--psychic), var(--dragon));}
+.border-psychic-to-dark {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--psychic), var(--dark));}
+.border-psychic-to-fairy {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--psychic), var(--fairy));}
+.border-psychic-to-shadow {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--psychic), var(--shadow));}
+.border-ice-to-normal {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ice), var(--normal));}
+.border-ice-to-fighting {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ice), var(--fighting));}
+.border-ice-to-flying {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ice), var(--flying));}
+.border-ice-to-poison {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ice), var(--poison));}
+.border-ice-to-ground {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ice), var(--ground));}
+.border-ice-to-rock {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ice), var(--rock));}
+.border-ice-to-bug {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ice), var(--bug));}
+.border-ice-to-ghost {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ice), var(--ghost));}
+.border-ice-to-steel {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ice), var(--steel));}
+.border-ice-to-fire {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ice), var(--fire));}
+.border-ice-to-water {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ice), var(--water));}
+.border-ice-to-grass {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ice), var(--grass));}
+.border-ice-to-electric {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ice), var(--electric));}
+.border-ice-to-psychic {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ice), var(--psychic));}
+.border-ice-to-dragon {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ice), var(--dragon));}
+.border-ice-to-dark {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ice), var(--dark));}
+.border-ice-to-fairy {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ice), var(--fairy));}
+.border-ice-to-shadow {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--ice), var(--shadow));}
+.border-dragon-to-normal {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--dragon), var(--normal));}
+.border-dragon-to-fighting {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--dragon), var(--fighting));}
+.border-dragon-to-flying {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--dragon), var(--flying));}
+.border-dragon-to-poison {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--dragon), var(--poison));}
+.border-dragon-to-ground {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--dragon), var(--ground));}
+.border-dragon-to-rock {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--dragon), var(--rock));}
+.border-dragon-to-bug {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--dragon), var(--bug));}
+.border-dragon-to-ghost {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--dragon), var(--ghost));}
+.border-dragon-to-steel {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--dragon), var(--steel));}
+.border-dragon-to-fire {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--dragon), var(--fire));}
+.border-dragon-to-water {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--dragon), var(--water));}
+.border-dragon-to-grass {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--dragon), var(--grass));}
+.border-dragon-to-electric {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--dragon), var(--electric));}
+.border-dragon-to-psychic {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--dragon), var(--psychic));}
+.border-dragon-to-ice {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--dragon), var(--ice));}
+.border-dragon-to-dark {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--dragon), var(--dark));}
+.border-dragon-to-fairy {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--dragon), var(--fairy));}
+.border-dragon-to-shadow {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--dragon), var(--shadow));}
+.border-dark-to-normal {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--dark), var(--normal));}
+.border-dark-to-fighting {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--dark), var(--fighting));}
+.border-dark-to-flying {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--dark), var(--flying));}
+.border-dark-to-poison {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--dark), var(--poison));}
+.border-dark-to-ground {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--dark), var(--ground));}
+.border-dark-to-rock {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--dark), var(--rock));}
+.border-dark-to-bug {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--dark), var(--bug));}
+.border-dark-to-ghost {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--dark), var(--ghost));}
+.border-dark-to-steel {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--dark), var(--steel));}
+.border-dark-to-fire {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--dark), var(--fire));}
+.border-dark-to-water {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--dark), var(--water));}
+.border-dark-to-grass {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--dark), var(--grass));}
+.border-dark-to-electric {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--dark), var(--electric));}
+.border-dark-to-psychic {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--dark), var(--psychic));}
+.border-dark-to-ice {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--dark), var(--ice));}
+.border-dark-to-dragon {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--dark), var(--dragon));}
+.border-dark-to-fairy {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--dark), var(--fairy));}
+.border-dark-to-shadow {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--dark), var(--shadow));}
+.border-fairy-to-normal {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fairy), var(--normal));}
+.border-fairy-to-fighting {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fairy), var(--fighting));}
+.border-fairy-to-flying {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fairy), var(--flying));}
+.border-fairy-to-poison {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fairy), var(--poison));}
+.border-fairy-to-ground {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fairy), var(--ground));}
+.border-fairy-to-rock {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fairy), var(--rock));}
+.border-fairy-to-bug {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fairy), var(--bug));}
+.border-fairy-to-ghost {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fairy), var(--ghost));}
+.border-fairy-to-steel {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fairy), var(--steel));}
+.border-fairy-to-fire {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fairy), var(--fire));}
+.border-fairy-to-water {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fairy), var(--water));}
+.border-fairy-to-grass {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fairy), var(--grass));}
+.border-fairy-to-electric {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fairy), var(--electric));}
+.border-fairy-to-psychic {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fairy), var(--psychic));}
+.border-fairy-to-ice {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fairy), var(--ice));}
+.border-fairy-to-dragon {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fairy), var(--dragon));}
+.border-fairy-to-dark {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fairy), var(--dark));}
+.border-fairy-to-shadow {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--fairy), var(--shadow));}
+.border-shadow-to-normal {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--shadow), var(--normal));}
+.border-shadow-to-fighting {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--shadow), var(--fighting));}
+.border-shadow-to-flying {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--shadow), var(--flying));}
+.border-shadow-to-poison {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--shadow), var(--poison));}
+.border-shadow-to-ground {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--shadow), var(--ground));}
+.border-shadow-to-rock {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--shadow), var(--rock));}
+.border-shadow-to-bug {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--shadow), var(--bug));}
+.border-shadow-to-ghost {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--shadow), var(--ghost));}
+.border-shadow-to-steel {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--shadow), var(--steel));}
+.border-shadow-to-fire {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--shadow), var(--fire));}
+.border-shadow-to-water {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--shadow), var(--water));}
+.border-shadow-to-grass {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--shadow), var(--grass));}
+.border-shadow-to-electric {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--shadow), var(--electric));}
+.border-shadow-to-psychic {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--shadow), var(--psychic));}
+.border-shadow-to-ice {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--shadow), var(--ice));}
+.border-shadow-to-dragon {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--shadow), var(--dragon));}
+.border-shadow-to-dark {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--shadow), var(--dark));}
+.border-shadow-to-fairy {background-image: linear-gradient(white, white), linear-gradient(var(--degrees), var(--shadow), var(--fairy));}
